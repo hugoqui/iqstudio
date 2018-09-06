@@ -44,6 +44,6 @@ export class ContactComponent implements OnInit {
       ""
     );
     alert("Muchas gracias por contactarnos. \nEn breve un asesor se comunicará con usted.");
-    // location.reload();
+    location.reload();
   }
 }
