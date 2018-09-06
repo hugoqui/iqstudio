@@ -5,7 +5,7 @@
 #header {
     background-image: url(assets/Images/banner-img.jpg);
     min-height: 500px;
-    
+
 }
 
 .navbar-brand {
@@ -40,3 +40,18 @@ body, footer{overflow-x:hidden;}
 }
 
 label {font-weight: bold}
+
+
+.bubble {
+
+  -webkit-animation: bubble 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: bubble 2s; /* Firefox < 16 */
+      -ms-animation: bubble 2s; /* Internet Explorer */
+       -o-animation: bubble 2s; /* Opera < 12.1 */
+          animation: bubble 2s;
+}
+
+@keyframes bubble {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
