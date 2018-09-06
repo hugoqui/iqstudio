@@ -1,6 +1,7 @@
 <div>
   <h1 class="text-center cris">CONTACTANOS</h1>
-  <h5 class="text-center text-secondary">Tus mensajes son imoportantes, escríbenos y un asesor te atenderá de inmediato.</h5>
+  <h5 class="text-center text-secondary">Tus mensajes son imoportantes, escríbenos y un asesor te atenderá de
+    inmediato.</h5>
 
 </div>
 
@@ -14,22 +15,22 @@
       <form>
         <div class="form-group">
           <label for="formGroupExampleInput">Nombre:</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingresa tu nombre">
+          <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Ingresa tu nombre">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">Teléfono</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingresa tu número de teléfono">
+          <input type="text" class="form-control" [(ngModel)]="phone" name="phone" placeholder="Ingresa tu número de teléfono">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">E-mail</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="iqstudio_01@ejemplo.com">
+          <input type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="email@ejemplo.com">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">Tu Mensaje</label>
-          <textarea rows="5" class="form-control" id="formGroupExampleInput2" placeholder="Tu opinión es importante"></textarea>
+          <textarea rows="5" class="form-control" [(ngModel)]="message" name="message" placeholder="Tu opinión es importante"></textarea>
         </div>
 
-        <button type="button" class="btn btn-primary" id="sendButton">
+        <button type="submit" class="btn btn-primary" id="sendEmail" (click)="SendEmail()">
           Enviar <i class="fas fa-envelope"></i>
         </button>
       </form>
