@@ -10,6 +10,7 @@ html {
   /* background-image: url(assets/Images/banner-img.jpg);
   background-size: cover; */
   min-height: 500px;
+  margin-bottom: 150px
 }
 
 .navbar-brand {
