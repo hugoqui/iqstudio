@@ -2,56 +2,77 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 
-#header {
-    background-image: url(assets/Images/banner-img.jpg);
-    min-height: 500px;
+html {
+  margin-right: 0px;
+}
 
+#header {
+  background-image: url(assets/Images/banner-img.jpg);
+  background-size: cover;
+  min-height: 500px;
 }
 
 .navbar-brand {
-    font-size:35px;
+  font-size: 35px;
 }
 .nav-item {
-    margin-left: 12px;
-    margin-right: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
-.dropdown-item, .dropdown-toggle, .nav-link {color: white !important}
-.active{
-    border-bottom: 1px solid white;
+.dropdown-item,
+.dropdown-toggle,
+.nav-link {
+  color: white !important;
+}
+.active {
+  border-bottom: 1px solid white;
 }
 
 #title {
-    margin-top:8%;
-    text-align:center;
-    color:white;
-    text-shadow:0px 0px 10px #000;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 10px #000;
+  padding-bottom: 50px;
 }
 
-#title h1 { font-size:6em}
-footer{padding:40px;  background-color:#bebdbd}
+#title h1 {
+  font-size: 6em;
+}
+footer {
+  padding: 40px;
+  background-color: #bebdbd;
+}
 footer a {
-    color:#1f1f1f;
-    margin:15px;
+  color: #1f1f1f;
+  margin: 15px;
 }
-body, footer{overflow-x:hidden;}
-
-.cris{
-    font-weight: bold; color: #282d52
+body,
+footer {
+  overflow-x: hidden;
 }
 
-label {font-weight: bold}
+.cris {
+  font-weight: bold;
+  color: #282d52;
+}
 
+label {
+  font-weight: bold;
+}
 
 .bubble {
-
   -webkit-animation: bubble 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: bubble 2s; /* Firefox < 16 */
-      -ms-animation: bubble 2s; /* Internet Explorer */
-       -o-animation: bubble 2s; /* Opera < 12.1 */
-          animation: bubble 2s;
+  -moz-animation: bubble 2s; /* Firefox < 16 */
+  -ms-animation: bubble 2s; /* Internet Explorer */
+  -o-animation: bubble 2s; /* Opera < 12.1 */
+  animation: bubble 2s;
 }
 
 @keyframes bubble {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
