@@ -57,9 +57,10 @@ export class Email {
     return (
       "withCredentials" in t
         ? t.open(e, o, !0)
-        : "undefined" !== typeof XDomainRequest
-          ? (t = new XDomainRequest()).open(e, o)
-          : (t = null),
+        : t = null,
+        // : "undefined" !== typeof XDomainRequest
+        //   ? (t = new XDomainRequest()).open(e, o)
+        //   : (t = null),
       t
     );
   }

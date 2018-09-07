@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { IqglobalService } from "../iqglobal.service";
 
 @Component({
   selector: "app-products",
@@ -6,7 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./products.component.css"]
 })
 export class ProductsComponent implements OnInit {
-  constructor() {}
+  constructor(private _data: IqglobalService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._data.currentItem = 'work';
+  }
 }

@@ -1,5 +1,5 @@
-<div id="header">
-  <nav class="navbar navbar-expand-lg navbar-light" style="background:transparent; z-index: 9;">
+<div id="header" class="d-none d-sm-block">
+  <nav class="navbar navbar-expand-lg navbar-light" style="z-index: 9;">
     <a class="navbar-brand  text-white" href="/">
       <img src="assets/Images/logo_blanco.png" height="75px" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" style="background: rgba(250, 250, 250, .4)"
@@ -10,28 +10,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link  text-white" routerLink="/" routerLinkActive="active"> Inicio </a>
+        <li class="nav-item" [ngClass]="{active: _data.currentItem == 'home' }">
+          <a class="nav-link  text-white" routerLink="/" > Inicio </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+            aria-expanded="false" [ngClass]="{active: _data.currentItem == 'work' }">
             Nuestro Trabajo
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background:rgb(10, 4, 4)">
-            <a class="dropdown-item" routerLink="/services" routerLinkActive="active">Servicios</a>
-            <a class="dropdown-item" routerLink="/products" routerLinkActive="active">Productos</a>
-            <a class="dropdown-item" routerLink="/clients" routerLinkActive="active">Clientes</a>
+            <a class="dropdown-item" routerLink="/services" >Servicios</a>
+            <a class="dropdown-item" routerLink="/products" >Productos</a>
+            <a class="dropdown-item" routerLink="/clients" >Clientes</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link  text-white" routerLink="/contact" routerLinkActive="active">Contactenos </a>
+        <li class="nav-item" [ngClass]="{'active': _data.currentItem=='contact'}">
+          <a class="nav-link  text-white" routerLink="/contact" >Contactenos </a>
         </li>
       </ul>
     </div>
   </nav>
   <!-- <div id="title"> -->
-  <div id="demo" class="carousel slide" data-ride="carousel" style="position:absolute; top:0;">
+  <div id="demo" class="carousel slide" data-ride="carousel" style="position:absolute; top:0; left:0; right:0;">
     <!-- Indicators -->
     <ul class="carousel-indicators">
       <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -59,20 +59,65 @@
         <img src="assets/Images/logo_blanco.png" class="img-fluid" alt="" style="max-width: 400px"></div>
       </div>
     </div>
-
-    <!-- Left and right controls
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a> -->
-
   </div>
-
-
-  <!-- <h1> < iQ Studio /> </h1>
-      <h2>Soluciones Digitales</h2> -->
-  <!-- <img src="assets/Images/logo_blanco.png" class="img-fluid" alt="" style="max-width: 400px"> -->
 </div>
-<!-- </div> -->
+
+
+
+<!-- Mobile -->
+<div class="d-block d-sm-none">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background:#000; z-index: 9;">
+    <a class="navbar-brand  text-white" href="/">
+      <img src="assets/Images/logo_blanco.png" height="75px" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" style="background: rgba(250, 250, 250, .4)"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/" [ngClass]="{active: _data.currentItem == 'home' }"> Inicio </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+          [ngClass]="{active: _data.currentItem == 'work' }" aria-expanded="false">
+            Trabajo
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background:rgb(10, 4, 4)">
+            <a class="dropdown-item" routerLink="/services" routerLinkActive="active">Servicios</a>
+            <a class="dropdown-item" routerLink="/products" routerLinkActive="active">Productos</a>
+            <a class="dropdown-item" routerLink="/clients" routerLinkActive="active">Clientes</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-white" routerLink="/contact" [ngClass]="{active: _data.currentItem == 'contact' }" >Contactenos </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <div id="title"> -->
+  <div id="demo" class="carousel slide" data-ride="carousel" >
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/Images/banner-img.jpg">
+        <div class="carousel-caption">
+          <img src="assets/Images/logo_blanco.png" class="img-fluid" alt="" style="max-width: 150px">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/Images/banner22.jpg" alt="">
+        <div class="carousel-caption">
+        <img src="assets/Images/logo_blanco.png" class="img-fluid" alt="" style="max-width: 150px"></div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/Images/banner33.jpg" alt="New York">
+        <div class="carousel-caption">
+        <img src="assets/Images/logo_blanco.png" class="img-fluid" alt="" style="max-width: 150px"></div>
+      </div>
+    </div>
+  </div>
+</div>

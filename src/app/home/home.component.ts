@@ -7,6 +7,7 @@ import {
   animate,
   transition
 } from "@angular/animations";
+import { IqglobalService } from "../iqglobal.service";
 
 @Component({
   selector: "app-home",
@@ -34,10 +35,12 @@ import {
   ]
 })
 export class HomeComponent implements OnInit {
-  constructor(public el: ElementRef) {}
+  constructor(public el: ElementRef, private _data: IqglobalService) {}
   state = "hide";
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._data.currentItem = "home";
+  }
 
   @HostListener("window:scroll", ["$event"])
   checkScroll() {

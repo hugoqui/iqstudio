@@ -1,40 +1,46 @@
-<div>
-  <h1 class="text-center cris">CONTACTANOS</h1>
-  <h5 class="text-center text-secondary">Tus mensajes son imoportantes, escríbenos y un asesor te atenderá de
-    inmediato.</h5>
+<main class="container">
+  <div>
+    <h1 class="text-center cris">CONTACTANOS</h1>
+    <h5 class="text-center text-secondary">Tus mensajes son imoportantes, escríbenos y un asesor te atenderá de
+      inmediato.</h5>
 
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="assets/Images/contactanos2.png" alt="">
-    </div>
-
-    <div class="col-md-6">
-      <form>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Nombre:</label>
-          <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Ingresa tu nombre">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Teléfono</label>
-          <input type="text" class="form-control" [(ngModel)]="phone" name="phone" placeholder="Ingresa tu número de teléfono">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">E-mail</label>
-          <input type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="email@ejemplo.com">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Tu Mensaje</label>
-          <textarea rows="5" class="form-control" [(ngModel)]="message" name="message" placeholder="Tu opinión es importante"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" id="sendEmail" (click)="SendEmail()">
-          Enviar <i class="fas fa-envelope"></i>
-        </button>
-      </form>
-    </div>
   </div>
 
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="assets/Images/contactanos2.png" alt="">
+      </div>
+
+      <div class="col-md-6">
+        <form method="GET">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Nombre:</label>
+            <input required type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Ingresa tu nombre">
+            <div *ngIf="error"  class="alert alert-danger bubble" role="alert"> Por favor ingrese su nombre.</div>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Teléfono</label>
+            <input type="text" class="form-control" [(ngModel)]="phone" name="phone" placeholder="Ingresa tu número de teléfono">
+            <div *ngIf="error"  class="alert alert-danger bubble" role="alert"> Por favor ingrese su número de teléfono.</div>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">E-mail</label>
+            <input type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="email@ejemplo.com">
+            <div *ngIf="error"  class="alert alert-danger bubble" role="alert"> Por favor ingrese su email.</div>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Tu Mensaje</label>
+            <textarea rows="5" class="form-control" required [(ngModel)]="message" name="message" placeholder="Tu opinión es importante"></textarea>
+            <div *ngIf="error" class="alert alert-danger bubble" role="alert"> Por favor ingrese su mensaje.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="sendEmail" (click)="SendEmail()">
+            Enviar <i class="fas fa-envelope"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</main>
