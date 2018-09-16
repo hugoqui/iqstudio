@@ -4,9 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>iQ Studio - Diseño Web</title>
-  <meta name="description" content="iQ Studio, provee una amplia gama de productos y servicios relacionados
-  con el ámbito digita. Desde cración de Sitios Web, Aplicaciones; hasta la toma de Fotos y Video Profesional,
-  y gafetes de identificación para empresas y centros educativos." />
+  <meta name="description" content="iQ Studio provee servicios de creación de Sitios Web y Aplicaciones; Sesión fotográfica; Gafetes PVC; en toda Guatemala y servicios técnicos en todo el Mundo." />
+  <link rel="canonical" href="https://www.iqstudiogt.com/" />
+  <meta property="og:locale" content="es_GT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Diseño Web y Aplicaciones - Fotografía, Video, Canets PVC | iQ Studio" />
+  <meta property="og:description" content="iQ Studio provee servicios de creación de Sitios Web y Aplicaciones; Sesión fotográfica; Gafetes PVC; en toda Guatemala y servicios técnicos en todo el Mundo." />
+  <meta property="og:url" content="https://www.iqstudiogt.com/" />
+  <meta property="og:site_name" content="iQ Studio" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="iQ Studio provee servicios de creación de Sitios Web y Aplicaciones; Sesión fotográfica; Gafetes PVC; en toda Guatemala y servicios técnicos en todo el Mundo." />
+  <meta name="twitter:title" content="Diseño Web y Aplicaciones - Fotografía, Video, Canets PVC | iQ Studio" />
+
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,22 +23,44 @@
     crossorigin="anonymous">
   <link rel="icon" type="image/png" href="assets/Images/favicon.png" />
 
+</head>
+
+<body>
+  <app-root></app-root>
   <!-- Smartsupp Live Chat script -->
   <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
     _smartsupp.key = '8ca07044425d4b226adc0a807e8212bd8915f17f';
     window.smartsupp || (function (d) {
-      var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
-      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
-      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
-      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+      var s, c, o = smartsupp = function () {
+        o._.push(arguments)
+      };
+      o._ = [];
+      s = d.getElementsByTagName('script')[0];
+      c = d.createElement('script');
+      c.type = 'text/javascript';
+      c.charset = 'utf-8';
+      c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?';
+      s.parentNode.insertBefore(c, s);
     })(document);
+
   </script>
-</head>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).click(function (event) {
+      var clickover = $(event.target);
+      var $navbar = $(".navbar-collapse");
+      var _opened = $navbar.hasClass("show");
+      console.log("Evento click");
+      if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+        console.log("se cumple condicion");
+        $navbar.collapse('hide');
+      }
+    });
 
-<body>
-  <app-root></app-root>
-
+  </script>
 </body>
 
 </html>
